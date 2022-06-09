@@ -10,7 +10,7 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
-
+//welp gg
 let db,
     dbConnectionStr = `mongodb+srv://jpman309:TznxAln2EBbRjtHA@cluster0.oks5jky.mongodb.net/?retryWrites=true&w=majority`
     dbName = 'Cluster0'
