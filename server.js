@@ -6,13 +6,15 @@ const MongoClient = require('mongodb').MongoClient
 const path = require('path')
 require('dotenv').config()
 
+
+
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 //help
 let db,
-    dbConnectionStr = `mongodb+srv://jpman309:TznxAln2EBbRjtHA@cluster0.oks5jky.mongodb.net/?retryWrites=true&w=majority`
+    dbConnectionStr = process.env.MONGODB_URI
     dbName = 'Cluster0'
 
 MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true })
